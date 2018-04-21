@@ -233,6 +233,28 @@ El valor proporcionat per la funció de cost, s'utilitza com entrada del mecanis
 	\includegraphics[scale=0.3]{imatges/aprendre/2bp.png}
 	\caption{\textit{Backpropagation}.}
 \end{figure}
+\\\\Un possible exemple seria l'utilització d'una xarxa neuronal per a desenvolupar una regressió que calculés una aproximació de la nota a treure en un examen en base a:
+\begin{itemize}
+	\item Nombre d'hores empreades a estudiar.
+	\item Nombre d'hores dormides.
+	\item Última nota obtinguda en el test.
+\end{itemize}
+L'etapa d'aprenentatge per aquest problema i donada una xarxa neuronal molt sencilla queda il·lustrada en la següent imatge.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/aprendre/3aprendre.png}
+	\caption{Etapa de càlcul.}
+	\label{fig:3aprendre}
+\end{figure}
+\\\\Un cop obtingut els resultats de la xarxa, s'ha d'aplicar la funció de cost que compara el valor preedit amb el valor obtingut realment i amb aquest resultat aplicar la tècnica de \textit{backpropagation} com es mostra en la següent imatge.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/aprendre/4bp.png}
+	\caption{Etapa d'aprenentatge.}
+	\label{fig:4bp}
+\end{figure}
+\\\\És important veure que en la figura \ref{fig:3aprendre} i \ref{fig:4bp} s'esta utilitzant la mateixa xarxa neuronal però utilitzant diferents dades, i que la funció de cost per aplicar el \textit{backpropagation} utilitza tots els valors disponibles en el conjunt d'entrenament. \footnote{Una iteració sobre totes les dades d'entrenament es coneix com un \textit{epoch}.}
+
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%DESCENS DEL GRADIENT%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Descens del gradient\label{dg}}
