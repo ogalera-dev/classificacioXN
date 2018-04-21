@@ -61,6 +61,7 @@
 
 
 \clearpage
+%%%%%%%%%%%%%%%%%%%%%%XARXA NEURONAL%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Què és una xarxa neuronal?}
 En aquesta secció es descriuran els components més importants que composen una xarxa neuronal.
 \begin{figure}[h!]
@@ -68,13 +69,146 @@ En aquesta secció es descriuran els components més importants que composen una
 	\includegraphics[scale=.5]{imatges/xnn.png}
 	\caption{Xarxa neuronal}
 \end{figure}
+\\\\Una xarxa neuronal, és una estructura de dades dissenyada per a simular (en la mesura del possible) el comportament del cerbell humà. El disseny d'aquesta estructura es fonamenta en diferents capes de neurones interconnectades entre elles i que a través d'un procés iteratiu, són capaces d'ajustar-se i d'aquesta manera adquirir coneixement.
+
+
+%%%%%%%%%%%%%%%%%%%%%%NEURONA%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \subsection{Què és una neurona?}
-\subsection{La funció d'activació}
+Les neurones són els blocs bàsics en que es recolçen les xarxes neuronals. La seva funcionalitat treballant de forma individual no serveix, però si que serveix si es treballa de forma estrcturada amb grans quantitas d'aquestes.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{imatges/neurona/1real.png}
+	\includegraphics[scale=0.4]{imatges/neurona/3estructura.png}
+	\caption{Anatomia d'una neurona real.}
+\end{figure}
+\\\\Una neurona es composa principalment de:
+\begin{itemize}
+	\item Núcli.
+	\item Dendrites (emissor).
+	\item Axó (receptor).
+\end{itemize}
+La interconexió de les neurones, es fa a través de l'enviament i recepció de impulsos elèctrics (\textit{synapses}).
+\pagebreak
+\clearpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{imatges/neurona/9parts.png}
+	\caption{Parts d'una neurona.}
+\end{figure}
+Una xarxa neuronal es pot representar a través d'una caixa negre on hi ha un conjunt d'entrades (neurones d'entrada) i una o varies sortides (neurones de sortida).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.2]{imatges/neurona/5estructura.png}
+	\caption{Xarxa neuronal simple.}
+\end{figure}
+\\\\Les neurones tenen la capacitat d'aprendre, això s'aconsegueix gràcies als pessos assignats a les connexions entre neurones (\textit{weights}), que determinen el grau d'importancia que té cada una de les neurones d'entrada. Aquests valors s'actualitzen a través de la tècnica del \textbf{\textit{backpropagation}} (secció \ref{bp}) que utilitza el mètode matemàtic del \textbf{descens del gradient} (secció \ref{dg} i \ref{dge}). 
+\\\\El fet d'actualitzar el valor per aquests pesos, determinarà el grau de qualitat de la xarxa neuronal.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.2]{imatges/neurona/6pes.png}
+	\caption{Pes (\textit{weights}) de les connexions entre neurones.}
+\end{figure}
+\pagebreak
+\\\\Amb els valors que rep una neurona de la resta de neurones d'entrada, cal generar un valor que serà la sortida, per això cal fer una agregació de valors a través de la \textbf{funció d'activació} (secció \ref{fa}).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{imatges/neurona/7activacio.png}
+	\caption{Agregació de valors d'entrada.}
+\end{figure}
+\\\\Descrits els diferents components d'una neurona, la integració d'aquesta dins d'una xarxa de neurones es pot representar a través de la següent imatge.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/neurona/8completa.png}
+	\caption{Integració d'una neurona en una xarxa neuronal.}
+\end{figure}
+S'ha de tenir en compte que el procés d'aprenentatge d'una xarxa neuronal és iteratiu, i que tots els valors de les neurones d'entrada corresponen a una mateixa observació i el valor de sortida al resultat d'aquesta observació.
+
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%FUNCIÓ D'ACTIVACIÓ%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{La funció d'activació \label{fa}}
+Les funcions d'activació serveixen per calcular el valor que emetrà una neurona com a sortida. Les funcions d'activació més típics són:
+\begin{itemize}
+	\item Threshold function.
+	\item Sigmoid.
+	\item Rectifier function.
+	\item Hyperbolic tangent (tanh).
+\end{itemize}
+\subsubsection{Threshold function}
+El rang de possibles valors per aquesta funció és 0 o 1, això fa que sigui una funció molt rigida i que s'adapti perfectament a casos on volem una sortida binaria.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/fa/1threshold.png}
+	\caption{Threshold function.}
+\end{figure}
+
+\subsubsection{Sigmoid}
+El rang de valors per aquesta funció va de (0, 1) i es sol utilitzar molt com a funció d'activació en l'última capa de neurones, per calcular probabilitats.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/fa/2sigmoid.png}
+	\caption{Sigmoid function.}
+\end{figure}
+\\\\\\És una funció que s'utilitza molt en la regressió logistica.
+
+\subsubsection{Rectifier function}
+El rang d'aquesta funció va de [0, $x$], on $x$ correspon a la suma ponderada dels valors d'entrada de la capa de neurones anterior.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/fa/3rectifier.png}
+	\caption{Rectifier function.}
+\end{figure}
+
+\subsubsection{Hyperbolic tangent}
+El rang d'aquesta funció va de (-1, 1) i és molt similar a la funció sigmoid.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/fa/4tanh.png}
+	\caption{Hyperbolic tangent.}
+\end{figure}
+
+\subsection{Funcions d'activació sobre una xarxa neuronal}
+Per a cada neurona interna, s'ha de definir una funció d'activació, per això es poden seguir diferents tècniques.
+\begin{itemize}
+	\item Assignar una mateixa funció d'activació a tota la xarxa neuronal (rigida però sencilla de desenvolupar i mantenir).
+	\item Assignar una mateixa funció d'activació a nivell de capa de neurones interna.
+	\item Assignar una funció d'activació diferent per a cada neurona (complexe però potent).
+\end{itemize}
+La tècnica a utilitzar dependrà sempre del tipus de problema a resoldre i de la potencia disponible.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/fa/5complet.png}
+	\caption{Aplicació de funcions d'activació sobre una xarxa neuronal.}
+\end{figure}
+
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%COM FUNCIONEN?%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Com funcionen?}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%COM APRENEN?%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Com aprenen?}
-\subsection{Descens del gradient}
-\subsection{Descens del gradient estocàstic}
-\subsection{Backpropagation}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%DESCENS DEL GRADIENT%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Descens del gradient\label{dg}}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%DESCENS DEL GRADIENT ESTOCÀSTIC%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Descens del gradient estocàstic\label{dge}}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%BACKPROPAGATION%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Backpropagation\label{bp}}
+
 
 \clearpage
 \section{Classificació utilitzant una xarxa neuronal}
@@ -96,6 +230,8 @@ Els passos a seguir per aplicar la classificació utilitzant una xarxa neuronal 
 \begin{thebibliography}{9}
 	\bibitem{ANN}\textit{Xarxa neuronal}:
   	\\\path{https://en.wikipedia.org/wiki/Artificial_neural_network}
+	\bibitem{AF1}\textit{Deep sparse rectifier neural networks}:
+  	\\\path{http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf}
 \end{thebibliography}
 
 \clearpage

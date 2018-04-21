@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  21 APR 2018 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  21 APR 2018 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -552,34 +552,205 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <imatges/xnn.png, id=19, 297.11pt x 357.335pt>
 File: imatges/xnn.png Graphic file (type png)
  <use imatges/xnn.png>
-Package pdftex.def Info: imatges/xnn.png used on input line 68.
+Package pdftex.def Info: imatges/xnn.png used on input line 69.
 (pdftex.def)             Requested size: 148.55463pt x 178.66705pt.
- [3
 
- <./imatges/xnn.png>] [4
+Underfull \hbox (badness 10000) in paragraph at lines 66--73
 
-] [5
+ []
 
-] [6
+[3
+
+ <./imatges/xnn.png>]
+<imatges/neurona/1real.png, id=24, 481.8pt x 362.35374pt>
+File: imatges/neurona/1real.png Graphic file (type png)
+
+<use imatges/neurona/1real.png>
+Package pdftex.def Info: imatges/neurona/1real.png used on input line 81.
+(pdftex.def)             Requested size: 192.71658pt x 144.93892pt.
+
+<imatges/neurona/3estructura.png, id=25, 448.67625pt x 561.09625pt>
+File: imatges/neurona/3estructura.png Graphic file (type png)
+
+<use imatges/neurona/3estructura.png>
+Package pdftex.def Info: imatges/neurona/3estructura.png used on input line 82.
+
+(pdftex.def)             Requested size: 179.46732pt x 224.43452pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 87.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+ [4
+
+ <./imatges/neurona/1real.png> <./imatges/neurona/3estructura.png>]
+<imatges/neurona/9parts.png, id=30, 875.27pt x 427.5975pt>
+File: imatges/neurona/9parts.png Graphic file (type png)
+
+<use imatges/neurona/9parts.png>
+Package pdftex.def Info: imatges/neurona/9parts.png used on input line 96.
+(pdftex.def)             Requested size: 350.10179pt x 171.03596pt.
+
+<imatges/neurona/5estructura.png, id=31, 1177.39874pt x 473.77pt>
+File: imatges/neurona/5estructura.png Graphic file (type png)
+
+<use imatges/neurona/5estructura.png>
+Package pdftex.def Info: imatges/neurona/5estructura.png used on input line 102
+.
+(pdftex.def)             Requested size: 235.47557pt x 94.75232pt.
+
+<imatges/neurona/6pes.png, id=32, 625.33624pt x 531.9875pt>
+File: imatges/neurona/6pes.png Graphic file (type png)
+
+<use imatges/neurona/6pes.png>
+Package pdftex.def Info: imatges/neurona/6pes.png used on input line 109.
+(pdftex.def)             Requested size: 125.06503pt x 106.39561pt.
+
+<imatges/neurona/7activacio.png, id=33, 276.03125pt x 277.035pt>
+File: imatges/neurona/7activacio.png Graphic file (type png)
+
+<use imatges/neurona/7activacio.png>
+Package pdftex.def Info: imatges/neurona/7activacio.png used on input line 116.
+
+(pdftex.def)             Requested size: 110.41054pt x 110.81203pt.
+
+<imatges/neurona/8completa.png, id=34, 1336.995pt x 583.17876pt>
+File: imatges/neurona/8completa.png Graphic file (type png)
+
+<use imatges/neurona/8completa.png>
+Package pdftex.def Info: imatges/neurona/8completa.png used on input line 122.
+(pdftex.def)             Requested size: 401.1016pt x 174.95497pt.
+
+Overfull \hbox (11.1016pt too wide) in paragraph at lines 122--123
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--126
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5
+
+ <./imatges/neurona/9parts.png> <./imatges/neurona/5estructura.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./imatges/neurona/6pes.png> <./imatges/neurona/7activacio.png>] [7 <./imatg
+es/neurona/8completa.png>]
+<imatges/fa/1threshold.png, id=46, 940.51375pt x 487.8225pt>
+File: imatges/fa/1threshold.png Graphic file (type png)
+
+<use imatges/fa/1threshold.png>
+Package pdftex.def Info: imatges/fa/1threshold.png used on input line 143.
+(pdftex.def)             Requested size: 282.1563pt x 146.34787pt.
+
+<imatges/fa/2sigmoid.png, id=47, 863.225pt x 476.78125pt>
+File: imatges/fa/2sigmoid.png Graphic file (type png)
+
+<use imatges/fa/2sigmoid.png>
+Package pdftex.def Info: imatges/fa/2sigmoid.png used on input line 151.
+(pdftex.def)             Requested size: 258.9695pt x 143.03548pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--155
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imatges/fa/3rectifier.png, id=48, 837.1275pt x 484.81125pt>
+File: imatges/fa/3rectifier.png Graphic file (type png)
+
+<use imatges/fa/3rectifier.png>
+Package pdftex.def Info: imatges/fa/3rectifier.png used on input line 160.
+(pdftex.def)             Requested size: 251.14018pt x 145.44449pt.
+ [8
+
+ <./imatges/fa/1threshold.png>]
+<imatges/fa/4tanh.png, id=52, 930.47626pt x 482.80376pt>
+File: imatges/fa/4tanh.png Graphic file (type png)
+
+<use imatges/fa/4tanh.png>
+Package pdftex.def Info: imatges/fa/4tanh.png used on input line 168.
+(pdftex.def)             Requested size: 279.14502pt x 144.84224pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./imatges/fa/2sigmoid.png> <./imatges/fa/3rectifier.png>]
+<imatges/fa/5complet.png, id=57, 766.865pt x 337.26pt>
+File: imatges/fa/5complet.png Graphic file (type png)
+
+<use imatges/fa/5complet.png>
+Package pdftex.def Info: imatges/fa/5complet.png used on input line 182.
+(pdftex.def)             Requested size: 230.06128pt x 101.17877pt.
+ [10 <./imatges/fa/4tanh.png> <./imatges/fa/5complet.png>] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
 
 ] (./memoria.aux) ) 
 Here is how much of TeX's memory you used:
- 3934 strings out of 493029
- 53364 string characters out of 6136234
- 122261 words of memory out of 5000000
- 7409 multiletter control sequences out of 15000+600000
- 9965 words of font info for 35 fonts, out of 8000000 for 9000
+ 4024 strings out of 493029
+ 55383 string characters out of 6136234
+ 124308 words of memory out of 5000000
+ 7481 multiletter control sequences out of 15000+600000
+ 10324 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,32p,251b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,32p,473b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
-c10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on memoria.pdf (7 pages, 130331 bytes).
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on memoria.pdf (19 pages, 2184597 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
