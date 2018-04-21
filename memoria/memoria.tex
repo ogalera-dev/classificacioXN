@@ -70,6 +70,12 @@ En aquesta secció es descriuran els components més importants que composen una
 	\caption{Xarxa neuronal}
 \end{figure}
 \\\\Una xarxa neuronal, és una estructura de dades dissenyada per a simular (en la mesura del possible) el comportament del cerbell humà. El disseny d'aquesta estructura es fonamenta en diferents capes de neurones interconnectades entre elles i que a través d'un procés iteratiu, són capaces d'ajustar-se i d'aquesta manera adquirir coneixement.
+\\\\Una xarxa neuronal sempre tindrà una única capa de neurones d'entrada, $n$ capes de neurones internes (depenent del problema que es vol resoldre) i 1 capa de neurones de sortida.
+\begin{itemize}
+	\item Neurones de la capa d'entrada: emulen sensors que perceben la informació que es vol processar.
+	\item Neurones de les capes internes: són les neurones que adquireixen el coneixement.
+	\item Neurones de la capa de sortida: són les neurones que proporcionen els resultats obtinguts.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%NEURONA%%%%%%%%%%%%%%%%%%%%%%%%
@@ -188,7 +194,24 @@ La tècnica a utilitzar dependrà sempre del tipus de problema a resoldre i de l
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%COM FUNCIONEN?%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Com funcionen?}
-
+El funcionament de les xarxes neuronals és basa en la configuració que s'ha de fer sobre les capes de neurones internes. Per veure millor com funcionen, s'utilitzarà un exemple de possible aplicació real, en la que es disposa d'un conjunt de paràmetres (dimensions, nombre de lavabos, distància del centre de la ciutat i edat) i es vol especular el preu que pot tenir una vivendra sengons les seves propietats.
+\\\\A nivell de neurona, s'ha d'elegir quins paràmetres actuen sobre el el seu càlcul i crear una \textit{synapse} que enllaçi les neurones. 
+\\\\En aquests exemple, la primera neurona s'utilitza per influir en l'especulació del preu en base a les mides de la vivenda i la distància que està del centre de la ciutat. 
+\\\\De forma intuitiva es pot pensar que les vivendes més grans i que estàn properes al centre de la ciutat són més cares, i per això, la primera neurona interna influirà en el preu en base aquests dos paràmetres.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/funcionament/1basic.png}
+	\caption{Configuració d'una neurona.}
+\end{figure}
+\\\\D'aquesta manera, una possible configuració completa d'una xarxa molt sencilla per calcular el preu pot ser com en la següent imatge.
+\pagebreak
+\clearpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.3]{imatges/funcionament/2completa.png}
+	\caption{Configuració completa d'una xarxa neuronal sencilla.}
+\end{figure}
+Les neurones que no tenen inpacte en el calcul no es representen utilitzant syapses, això es pot interpretar com que tenen un impacte nul sobre aquell càlcul.
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%COM APRENEN?%%%%%%%%%%%%%%%%%%%%%%%%
