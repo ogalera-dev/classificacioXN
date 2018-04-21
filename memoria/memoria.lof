@@ -1,15 +1,17 @@
 \select@language {catalan}
 \contentsline {figure}{\numberline {1}{\ignorespaces Xarxa neuronal}}{3}
-\contentsline {figure}{\numberline {2}{\ignorespaces Anatomia d'una neurona real.}}{4}
-\contentsline {figure}{\numberline {3}{\ignorespaces Parts d'una neurona.}}{5}
-\contentsline {figure}{\numberline {4}{\ignorespaces Xarxa neuronal simple.}}{5}
-\contentsline {figure}{\numberline {5}{\ignorespaces Pes (\textit {weights}) de les connexions entre neurones.}}{6}
-\contentsline {figure}{\numberline {6}{\ignorespaces Agregaci\IeC {\'o} de valors d'entrada.}}{6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Integraci\IeC {\'o} d'una neurona en una xarxa neuronal.}}{7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Threshold function.}}{8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Sigmoid function.}}{9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Rectifier function.}}{9}
-\contentsline {figure}{\numberline {11}{\ignorespaces Hyperbolic tangent.}}{10}
-\contentsline {figure}{\numberline {12}{\ignorespaces Aplicaci\IeC {\'o} de funcions d'activaci\IeC {\'o} sobre una xarxa neuronal.}}{10}
-\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o} d'una neurona.}}{11}
-\contentsline {figure}{\numberline {14}{\ignorespaces Configuraci\IeC {\'o} completa d'una xarxa neuronal sencilla.}}{12}
+\contentsline {figure}{\numberline {2}{\ignorespaces Anatomia d'una neurona real.}}{5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Parts d'una neurona.}}{6}
+\contentsline {figure}{\numberline {4}{\ignorespaces Xarxa neuronal simple.}}{6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Pes (\textit {weights}) de les connexions entre neurones.}}{7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Agregaci\IeC {\'o} de valors d'entrada.}}{7}
+\contentsline {figure}{\numberline {7}{\ignorespaces Integraci\IeC {\'o} d'una neurona en una xarxa neuronal.}}{8}
+\contentsline {figure}{\numberline {8}{\ignorespaces Threshold function.}}{9}
+\contentsline {figure}{\numberline {9}{\ignorespaces Sigmoid function.}}{10}
+\contentsline {figure}{\numberline {10}{\ignorespaces Rectifier function.}}{10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Hyperbolic tangent.}}{11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Aplicaci\IeC {\'o} de funcions d'activaci\IeC {\'o} sobre una xarxa neuronal.}}{11}
+\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o} d'una neurona.}}{12}
+\contentsline {figure}{\numberline {14}{\ignorespaces Configuraci\IeC {\'o} completa d'una xarxa neuronal sencilla.}}{13}
+\contentsline {figure}{\numberline {15}{\ignorespaces Funci\IeC {\'o} de cost.}}{14}
+\contentsline {figure}{\numberline {16}{\ignorespaces \textit {Backpropagation}.}}{15}

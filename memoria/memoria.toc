@@ -1,21 +1,21 @@
 \select@language {catalan}
 \contentsline {section}{\numberline {1}Qu\IeC {\`e} \IeC {\'e}s una xarxa neuronal?}{3}
-\contentsline {subsection}{\numberline {1.1}Qu\IeC {\`e} \IeC {\'e}s una neurona?}{4}
-\contentsline {subsection}{\numberline {1.2}La funci\IeC {\'o} d'activaci\IeC {\'o} }{8}
-\contentsline {subsubsection}{\numberline {1.2.1}Threshold function}{8}
-\contentsline {subsubsection}{\numberline {1.2.2}Sigmoid}{8}
-\contentsline {subsubsection}{\numberline {1.2.3}Rectifier function}{9}
-\contentsline {subsubsection}{\numberline {1.2.4}Hyperbolic tangent}{9}
-\contentsline {subsection}{\numberline {1.3}Funcions d'activaci\IeC {\'o} sobre una xarxa neuronal}{10}
-\contentsline {subsection}{\numberline {1.4}Com funcionen?}{11}
-\contentsline {subsection}{\numberline {1.5}Com aprenen?}{13}
-\contentsline {subsection}{\numberline {1.6}Descens del gradient}{14}
-\contentsline {subsection}{\numberline {1.7}Descens del gradient estoc\IeC {\`a}stic}{15}
-\contentsline {subsection}{\numberline {1.8}Backpropagation}{16}
-\contentsline {section}{\numberline {2}Classificaci\IeC {\'o} utilitzant una xarxa neuronal}{17}
-\contentsline {subsection}{\numberline {2.1}Dades}{17}
-\contentsline {subsection}{\numberline {2.2}Problema}{17}
-\contentsline {subsection}{\numberline {2.3}Eines a utilitzar}{17}
-\contentsline {subsection}{\numberline {2.4}Classificaci\IeC {\'o}}{17}
-\contentsline {subsubsection}{\numberline {2.4.1}Processament de les dades}{17}
-\contentsline {section}{\numberline {A}Codi}{19}
+\contentsline {subsection}{\numberline {1.1}Qu\IeC {\`e} \IeC {\'e}s una neurona?}{5}
+\contentsline {subsection}{\numberline {1.2}La funci\IeC {\'o} d'activaci\IeC {\'o} }{9}
+\contentsline {subsubsection}{\numberline {1.2.1}Threshold function}{9}
+\contentsline {subsubsection}{\numberline {1.2.2}Sigmoid}{9}
+\contentsline {subsubsection}{\numberline {1.2.3}Rectifier function}{10}
+\contentsline {subsubsection}{\numberline {1.2.4}Hyperbolic tangent}{10}
+\contentsline {subsection}{\numberline {1.3}Funcions d'activaci\IeC {\'o} sobre una xarxa neuronal}{11}
+\contentsline {subsection}{\numberline {1.4}Com funcionen?}{12}
+\contentsline {subsection}{\numberline {1.5}Com aprenen?}{14}
+\contentsline {subsection}{\numberline {1.6}Descens del gradient}{16}
+\contentsline {subsection}{\numberline {1.7}Descens del gradient estoc\IeC {\`a}stic}{17}
+\contentsline {subsection}{\numberline {1.8}Backpropagation}{18}
+\contentsline {section}{\numberline {2}Classificaci\IeC {\'o} utilitzant una xarxa neuronal}{19}
+\contentsline {subsection}{\numberline {2.1}Dades}{19}
+\contentsline {subsection}{\numberline {2.2}Problema}{19}
+\contentsline {subsection}{\numberline {2.3}Eines a utilitzar}{19}
+\contentsline {subsection}{\numberline {2.4}Classificaci\IeC {\'o}}{19}
+\contentsline {subsubsection}{\numberline {2.4.1}Processament de les dades}{19}
+\contentsline {section}{\numberline {A}Codi}{21}
