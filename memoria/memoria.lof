@@ -2,18 +2,31 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Xarxa neuronal}}{3}
 \contentsline {figure}{\numberline {2}{\ignorespaces Anatomia d'una neurona real.}}{5}
 \contentsline {figure}{\numberline {3}{\ignorespaces Parts d'una neurona.}}{6}
-\contentsline {figure}{\numberline {4}{\ignorespaces Xarxa neuronal simple.}}{6}
+\contentsline {figure}{\numberline {4}{\ignorespaces Xarxa neuronal simple (Perceptr\IeC {\'o}).}}{6}
 \contentsline {figure}{\numberline {5}{\ignorespaces Pes (\textit {weights}) de les connexions entre neurones.}}{7}
-\contentsline {figure}{\numberline {6}{\ignorespaces Agregaci\IeC {\'o} de valors d'entrada.}}{7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Agregaci\IeC {\'o} de valors d'entrada (funci\IeC {\'o} d'activaci\IeC {\'o}).}}{7}
 \contentsline {figure}{\numberline {7}{\ignorespaces Integraci\IeC {\'o} d'una neurona en una xarxa neuronal.}}{8}
-\contentsline {figure}{\numberline {8}{\ignorespaces Threshold function.}}{9}
-\contentsline {figure}{\numberline {9}{\ignorespaces Sigmoid function.}}{10}
-\contentsline {figure}{\numberline {10}{\ignorespaces Rectifier function.}}{10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Hyperbolic tangent.}}{11}
+\contentsline {figure}{\numberline {8}{\ignorespaces \textit {Threshold function.}}}{9}
+\contentsline {figure}{\numberline {9}{\ignorespaces \textit {Sigmoid function.}}}{10}
+\contentsline {figure}{\numberline {10}{\ignorespaces \textit {Rectifier function.}}}{10}
+\contentsline {figure}{\numberline {11}{\ignorespaces \textit {Hyperbolic tangent.}}}{11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Aplicaci\IeC {\'o} de funcions d'activaci\IeC {\'o} sobre una xarxa neuronal.}}{11}
-\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o} d'una neurona.}}{12}
-\contentsline {figure}{\numberline {14}{\ignorespaces Configuraci\IeC {\'o} completa d'una xarxa neuronal sencilla.}}{13}
+\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o} d'una neurona.}}{13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Configuraci\IeC {\'o} completa d'una xarxa neuronal senzilla.}}{13}
 \contentsline {figure}{\numberline {15}{\ignorespaces Funci\IeC {\'o} de cost.}}{14}
 \contentsline {figure}{\numberline {16}{\ignorespaces \textit {Backpropagation}.}}{15}
 \contentsline {figure}{\numberline {17}{\ignorespaces Etapa de c\IeC {\`a}lcul.}}{15}
 \contentsline {figure}{\numberline {18}{\ignorespaces Etapa d'aprenentatge.}}{16}
+\contentsline {figure}{\numberline {19}{\ignorespaces Etapa d'aprenentatge.}}{17}
+\contentsline {figure}{\numberline {20}{\ignorespaces Sunway taihulight.}}{18}
+\contentsline {figure}{\numberline {21}{\ignorespaces Xarxa neuronal complexa.}}{18}
+\contentsline {figure}{\numberline {22}{\ignorespaces Descens del gradient.}}{19}
+\contentsline {figure}{\numberline {23}{\ignorespaces Descens del gradient.}}{20}
+\contentsline {figure}{\numberline {24}{\ignorespaces Descens del gradient en diferents dimensions.}}{20}
+\contentsline {figure}{\numberline {25}{\ignorespaces \IeC {\`O}ptim local.}}{21}
+\contentsline {figure}{\numberline {26}{\ignorespaces Descens del gradient estoc\IeC {\`a}stic.}}{22}
+\contentsline {figure}{\numberline {27}{\ignorespaces Forwardpropagation.}}{23}
+\contentsline {figure}{\numberline {28}{\ignorespaces Backpropagation.}}{23}
+\contentsline {figure}{\numberline {29}{\ignorespaces Dades.}}{26}
+\contentsline {figure}{\numberline {30}{\ignorespaces Entrenament de la xarxa.}}{33}
+\contentsline {figure}{\numberline {31}{\ignorespaces Matriu de confusi\IeC {\'o}.}}{34}
