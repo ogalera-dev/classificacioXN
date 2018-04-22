@@ -17,16 +17,16 @@
 \contentsline {figure}{\numberline {16}{\ignorespaces \textit {Backpropagation}.}}{15}
 \contentsline {figure}{\numberline {17}{\ignorespaces Etapa de c\IeC {\`a}lcul.}}{15}
 \contentsline {figure}{\numberline {18}{\ignorespaces Etapa d'aprenentatge.}}{16}
-\contentsline {figure}{\numberline {19}{\ignorespaces Etapa d'aprenentatge.}}{17}
+\contentsline {figure}{\numberline {19}{\ignorespaces Possibles connexions.}}{17}
 \contentsline {figure}{\numberline {20}{\ignorespaces Sunway taihulight.}}{18}
 \contentsline {figure}{\numberline {21}{\ignorespaces Xarxa neuronal complexa.}}{18}
 \contentsline {figure}{\numberline {22}{\ignorespaces Descens del gradient.}}{19}
-\contentsline {figure}{\numberline {23}{\ignorespaces Descens del gradient.}}{20}
+\contentsline {figure}{\numberline {23}{\ignorespaces Passos del descens del gradient.}}{20}
 \contentsline {figure}{\numberline {24}{\ignorespaces Descens del gradient en diferents dimensions.}}{20}
 \contentsline {figure}{\numberline {25}{\ignorespaces \IeC {\`O}ptim local.}}{21}
 \contentsline {figure}{\numberline {26}{\ignorespaces Descens del gradient estoc\IeC {\`a}stic.}}{22}
-\contentsline {figure}{\numberline {27}{\ignorespaces Forwardpropagation.}}{23}
-\contentsline {figure}{\numberline {28}{\ignorespaces Backpropagation.}}{23}
+\contentsline {figure}{\numberline {27}{\ignorespaces \textit {Forwardpropagation}.}}{23}
+\contentsline {figure}{\numberline {28}{\ignorespaces \textit {Backpropagation}.}}{23}
 \contentsline {figure}{\numberline {29}{\ignorespaces Dades.}}{26}
 \contentsline {figure}{\numberline {30}{\ignorespaces Entrenament de la xarxa.}}{33}
 \contentsline {figure}{\numberline {31}{\ignorespaces Matriu de confusi\IeC {\'o}.}}{34}

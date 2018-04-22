@@ -228,35 +228,35 @@ Sobre aquestes dades, es vol \textbf{especular el preu} que pot tenir un habitat
 \subsection{Com aprenen?}
 Com ja s'ha dit anteriorment, les xarxes neuronals es basen en un mecanisme d'aprenentatge iteratiu amb el qual van adquirint coneixement a mesura que guanyen experiència. Per aquest motiu, és necessari dividir les etapes de funcionament d'una xarxa neuronal en:
 \begin{itemize}
-	\item \textbf{Etapa d'entrenament:} en aquesta etapa es proporcionen multiples exemples a partir dels quals s'adquireix la gran majoria del coneixement. S'ha de tenir en compte que durant aquest procés cal saber el resultat correcte per obtenir una xarxa ben entrenada.
+	\item \textbf{Etapa d'entrenament:} en aquesta etapa es proporcionen múltiples exemples a partir dels quals s'adquireix la gran majoria del coneixement. S'ha de tenir en compte, que durant aquesta etapa cal saber el resultat correcte per obtenir una xarxa ben entrenada.
 	\item \textbf{Etapa de test:} en aquesta etapa es posa a prova la xarxa, proporcionant noves dades i analitzant els resultats. En cas de comptar amb el resultat correcte per aquestes dades, la xarxa pot continuar aprenent.
 \end{itemize}
-Durant l'etapa d'entrenament i un cop s'obté el resultat proporcionat de la xarxa, cal comprar-lo amb el resultat real i extreure un valor que representi la distància que hi ha entre el valor preedit i el correcte. Aquesta magnitut s'extreu a partir de la funció de cost. 
+Durant l'etapa d'entrenament i un cop s'obté el resultat proporcionat de la xarxa, cal comprar-lo amb el resultat real i extreure un valor que representi la distància que hi ha entre el valor predit i el correcte. Aquesta magnitud s'extreu a partir de la funció de cost. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/aprendre/1aprendre.png}
 	\caption{Funció de cost.}
 \end{figure}
-El valor proporcionat per la funció de cost, s'utilitza com entrada del mecanisme d'adaptació d'adaptació de la xarxa(\textit{backpropagation}).
+\\\\El valor proporcionat per la funció de cost, s'utilitza com entrada del mecanisme d'adaptació de la xarxa (\textit{backpropagation}).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/aprendre/2bp.png}
 	\caption{\textit{Backpropagation}.}
 \end{figure}
-\\\\Un possible exemple seria l'utilització d'una xarxa neuronal per a desenvolupar una regressió que calculés una aproximació de la nota a treure en un examen en base a:
+\\\\Un possible exemple, seria la utilització d'una xarxa neuronal per a desenvolupar una regressió que calculés una aproximació de la nota a treure en un examen d'acord amb:
 \begin{itemize}
-	\item Nombre d'hores empreades a estudiar.
+	\item Nombre d'hores emprades a estudiar.
 	\item Nombre d'hores dormides.
 	\item Última nota obtinguda en el test.
 \end{itemize}
-L'etapa d'aprenentatge per aquest problema i donada una xarxa neuronal molt sencilla queda il·lustrada en la següent imatge.
+L'etapa d'aprenentatge per aquest problema i donada una xarxa neuronal molt senzilla queda il·lustrada en la següent imatge.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/aprendre/3aprendre.png}
 	\caption{Etapa de càlcul.}
 	\label{fig:3aprendre}
 \end{figure}
-\\\\Un cop obtingut els resultats de la xarxa, s'ha d'aplicar la funció de cost que compara el valor preedit amb el valor obtingut realment i amb aquest resultat aplicar la tècnica de \textit{backpropagation} com es mostra en la següent imatge.
+\\Un cop obtingut els resultats de la xarxa, s'ha d'aplicar la funció de cost que compara el valor predit amb el valor real i amb aquest resultat aplicar la tècnica de \textit{backpropagation} com es mostra en la següent imatge.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/aprendre/4bp.png}
@@ -265,36 +265,36 @@ L'etapa d'aprenentatge per aquest problema i donada una xarxa neuronal molt senc
 \end{figure}
 \\\\És important veure que en la figura \ref{fig:3aprendre} i \ref{fig:4bp} s'esta utilitzant la mateixa xarxa neuronal però utilitzant diferents dades, i que la funció de cost per aplicar el \textit{backpropagation} utilitza tots els valors disponibles en el conjunt d'entrenament. \footnote{Una iteració sobre totes les dades d'entrenament es coneix com un \textit{epoch}.}
 
+
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%DESCENS DEL GRADIENT%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Descens del gradient\label{dg}}
-Per aconseguir que la xarxa neuronal aprengui, cal modificar els pessos de les synapses que connecten les diferents capes de neurones.
-\\\\Donat una xarxa neuronal simple on hi ha 4 neurones en la capa d'entrada, 5 neurones en la capa interna i 1 neurona en la capa de sortida, tenim un total de 5 possibles synapses. 
+Per aconseguir que la xarxa neuronal aprengui, cal modificar els pesos de les \textit{synapses} que connecten les diferents capes de neurones.
+\\\\Donat una xarxa neuronal simple on hi ha quatre neurones en la capa d'entrada, cinc en la capa interna i una en la capa de sortida, tenim un total de vint-i-cinc possibles connexions. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/dg/1dg.png}
-	\caption{Etapa d'aprenentatge.}
-	\label{fig:4bp}
+	\caption{Possibles connexions.}
 \end{figure}
-\\\\Ara assumim que les variables d'entrada tenen un rang de possibles valors que va de [1, 1000] i volem ajustar el coneixement modificant aleatoriament els 25 possibles pesos, això fa que hi hagui $1000^{25}$ possibles combinacions. Tenint en compte que el supercomputador més potent a nivell mundial \textit{sunway taihulight} té una potència de calcul d'aproximadament 93 PFLOPs.\footnote{Pot arribar a executar aproximadament $9.3 \cdot 10^{15}$ operacions cada segon.}
+\\\\Ara assumim que les variables d'entrada tenen un rang de possibles valors que va de [1, 1000] i volem ajustar el coneixement modificant aleatòriament els vint-i-cinc possibles pesos, això fa que hi hagui \textbf{$1000^{25}$} possibles combinacions. Tenint en compte que el \textbf{supercomputador més potent a nivell mundial \textit{sunway taihulight}} té una potència de càlcul d'aproximadament \textbf{93 PFLOPs}\cite{SC}.\footnote{Pot arribar a executar aproximadament $9.3 \cdot 10^{15}$ operacions cada segon.}
 \pagebreak
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/dg/sunlight.jpg}
 	\caption{Sunway taihulight.}
 \end{figure}
-\\\\Caldrien $1.08 \cdot 10^{58}$ segons, és a dir $3.42 \cdot 10^{50}$ anys. 
+\\\\Caldrien $1.08 \cdot 10^{58}$ segons, és a dir $3.42 \cdot 10^{50}$ anys per configurar la xarxa. 
 $$\frac{1000^{25}}{93 \cdot 10^{15}} \approx 1.08 \cdot 10^{58} segons \approx 3.42 \cdot 10^{50} anys$$ 
-Tot això tenint en compte que es pot fer una assignació de pesos per operació, cosa que no pot ser com ja hem vist abans. 
-\\\\I si tenim una xarxa més complexa?
+Tot això, tenint en compte que es pot fer una assignació de pesos per operació, cosa que no pot ser com ja s'ha vist abans.
+\\\\I si tenim una xarxa més complexa???
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.25]{imatges/dg/xnComplexa.png}
 	\caption{Xarxa neuronal complexa.}
 \end{figure}
-\\\\Vist que utilitzar força bruta no serveix en aquest problema cal utilitzar una altre mètode i en aquest cas el descens del gradient.
-\\\\El descens del gradient és el mètode matemàtic en que es basa la tècnica \textit{backpropagation} per aconseguir absorbir el coneixement adquirit durant la fase d'entrenament. 
-\\\\Aquesta tècnica radica en buscar el camí més curt per reduir la funció de cost, això es fa a través de la derivada de la funció de cost que determina la pendent en un punt donat.
+\\\\Vist que utilitzar força bruta no serveix en aquest problema, cal utilitzar un altre mètode que en aquest cas és el \textbf{descens del gradient}.
+\\\\El descens del gradient és el mètode matemàtic en què es basa la tècnica \textit{backpropagation} per aconseguir absorbir el coneixement adquirit durant la fase d'entrenament. 
+\\\\Aquesta tècnica radica en buscar el camí més curt per reduir la funció de cost, això es fa a través de la derivada de la funció de cost que determina el pendent en un punt donat.
 \begin{figure}[h!]
 	\includegraphics[scale=0.25]{imatges/dg/2dg2.png}
 	\includegraphics[scale=0.25]{imatges/dg/3dg3.png}
@@ -302,14 +302,14 @@ Tot això tenint en compte que es pot fer una assignació de pesos per operació
 	\includegraphics[scale=0.25]{imatges/dg/5dg5.png}
 	\caption{Descens del gradient.}
 \end{figure}
-\\\\Així doncs, utilitzant la tècnica del descens del gradient i per aquesta funció de cost, podem trobar l'òptim en pocs passos (quatre passos en aquest cas).
+\\\\Així doncs, utilitzant la tècnica del descens del gradient i per aquesta funció de cost, podem trobar l'òptim en pocs passos.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/dg/6dg6.png}
-	\caption{Descens del gradient.}
+	\caption{Passos del descens del gradient.}
 \end{figure}
 \pagebreak 
-\\\\Les següents imatges mostren el procés del descens del gradient tenint en compte diferents dimensions.
+\\\\Les següents imatges mostren els passos del descens del gradient tenint en compte diferents dimensions.
 \begin{figure}[h!]
 	\includegraphics[scale=0.25]{imatges/dg/dg1d.png}
 	\includegraphics[scale=0.25]{imatges/dg/dg2d.png}
@@ -318,58 +318,62 @@ Tot això tenint en compte que es pot fer una assignació de pesos per operació
 	\caption{Descens del gradient en diferents dimensions.}
 \end{figure}
 
+
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%DESCENS DEL GRADIENT ESTOCÀSTIC%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Descens del gradient estocàstic\label{dge}}
-El típic problema que podem trobar a l'hora d'utilitzar el mètode del descens del gradient\footnote{Notar que aquest problema no es tindrà si la funció és convexa.}, és el de no arribar a trobar l'òptim global a causa de que s'ha arribat a un òptim local. Això vol dir que no arribem a entrenar la xarxa tant com voldriem. Per resoldre aquest problema es pot utilitzar el mètode del descens del gradient estocastic.
+El típic problema que es pot trobar a l'hora d'utilitzar el mètode del descens del gradient\footnote{Notar que aquest problema no es tindrà si la funció és convexa.}, és el de no arribar a trobar l'òptim global, a causa de que s'ha \say{caigut} a un òptim local. 
+Això vol dir que no s'arriba a entrenar la xarxa tant com es voldria. Per resoldre aquest problema, es pot utilitzar el mètode del \textbf{descens del gradient estocàstic}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{imatges/dge/1dge.png}
 	\caption{Òptim local.}
 \end{figure}
-\\\\El descens del gradient estocàstic s'aconsegueix aplicant la funció de \textit{backpropagation} per cada registre processat per la xarxa, d'aquesta manera s'obté una major fluctuació i així hi ha més probabilitat de no caure en un òptim local.
+\\\\El descens del gradient estocàstic s'aconsegueix aplicant la funció de \textit{backpropagation} per cada registre processat per la xarxa, d'aquesta manera s'obté una major fluctuació i així hi ha més probabilitat de no \say{caure} en un òptim local.
 \pagebreak
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{imatges/dge/2dge.png}
 	\caption{Descens del gradient estocàstic.}
 \end{figure}
-\\\\És important veure que aquest mètode és indeterminista ja que el resultat dependrà de l'ordre en que es processin els registres.
+\\\\És important veure que \textbf{aquest mètode és indeterminista}, ja que el resultat dependrà de l'ordre en què es processin els registres.
 
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%BACKPROPAGATION%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Backpropagation\label{bp}}
-El Backpropagation és un algorisme complex a nivell matemàtic que permet ajustar tots els pesos a l'hora, es a dir, permet identificar quins són els pesos que estan causant més error i en quina mesura s'han de modificar.
-\\\\Durant l'entrenament d'una xarxa neuronal, podem destacar dues fases.
-\\\\La fase de \textit{Forwardpropagation} on entren valors per les neurones d'entrada i es genera un resultat.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.25]{imatges/bp/1bp.png}
-	\caption{Forwardpropagation.}
-\end{figure}
-\\\\La fase de \textit{Backpropagation} on es calcula l'error comés amb el resultat i s'intenten ajustar els pesos de les synapses.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.25]{imatges/bp/2bp.png}
-	\caption{Backpropagation.}
-\end{figure}
+\subsection{\textit{Backpropagation}\label{bp}}
+El \textit{Backpropagation} és un algorisme complex a nivell matemàtic que permet ajustar tots els pesos a l'hora, és a dir, permet identificar quins són els pesos que estan causant més error i en quina mesura s'han de modificar.
+\\\\Durant l'entrenament d'una xarxa neuronal, es poden destacar dues fases.
+\begin{itemize}
+	\item La fase de \textit{Forwardpropagation} on entren valors per les neurones d'entrada i es genera un resultat.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.25]{imatges/bp/1bp.png}
+		\caption{\textit{Forwardpropagation}.}
+	\end{figure}
+	\item La fase de \textit{Backpropagation} on es calcula l'error comès a partir del resultat real, i s'intenten ajustar els pesos de les connexions.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.25]{imatges/bp/2bp.png}
+		\caption{\textit{Backpropagation}.}
+	\end{figure}
+\end{itemize}
 \pagebreak
-\\\\Els passos que es segueixen durant l'entrenament d'una xarxa són:
+Els passos que es segueixen durant l'entrenament d'una xarxa són:
 \begin{enumerate}
-	\item Iniciar aleatoriament (amb un valor pròxim a 0) els pesos de les synapses.
+	\item Iniciar aleatòriament (amb un valor pròxim a 0) els pesos de les connexions.
 	\item Assignar un valor (de la mateixa observació) a cada una de les neurones de la capa d'entrada.
-	\item \textit{Forwardpropagation}, activant les neurones.
+	\item \textit{Forwardpropagation} activant les neurones.
 	\item Calcular l'error generat a través de la funció de cost.
-	\item \textit{Backpropagation}, corregint l'error comés.
-	\item Repetir passos 1-5 fins arribar a processar totes les observacions.
+	\item \textit{Backpropagation}, corregint l'error comès.
+	\item Repetir passos 1-5 fins a arribar a processar totes les observacions.
 	\item S'ha completat una \textit{epoch}, fer més \textit{epochs} repetint passos 1-6.
 \end{enumerate}
 
 \clearpage
 \section{Classificació utilitzant una xarxa neuronal}
 \subsection{Dades\label{dades}}
-Les dades amb les que es treballarà (\path{Churn_Modelling.csv}), corresponen a 10.000 clients d'un banc (fictici) amb els següents camps:
+Les dades amb les quals es treballarà (\path{Churn_Modelling.csv}), corresponen a 10.000 clients d'un banc (fictici) amb els següents camps:
 \begin{itemize}
 	\item \textbf{RowNumber:} identificador de registre [1-10.000].
 	\item \textbf{CustomerId:} identificador univoc del client.
@@ -378,8 +382,8 @@ Les dades amb les que es treballarà (\path{Churn_Modelling.csv}), corresponen a
 	\item \textbf{Geography:} País d'origen.
 	\item \textbf{Gender:} Sexe.
 	\item \textbf{Age:} Edat.
-	\item \textbf{Tenure:} Nombre d'anys des de que és client.
-	\item \textbf{Balance:} Ingressos fets respecte les despeses.
+	\item \textbf{Tenure:} Nombre d'anys d'ençà que és client.
+	\item \textbf{Balance:} Ingressos fets respecte a les despeses.
 	\item \textbf{NumOfProduct:} Nombre de productes del banc que ha adquirit.
 	\item \textbf{HasCrCard}: Si té o no targeta de crèdit.
 	\item \textbf{IsActiveMember:} Si utilitza algun dels productes amb regularitat.
@@ -398,48 +402,50 @@ En la següent imatge es pot veure un extracte dels 10 primers registres del \te
 \subsection{Problema}
 A partir de les dades descrites en la secció \ref{dades}, volem arribar a respondre la següent pregunta mitjançant classificació utilitzant una xarxa neuronal.
 \begin{center}
-\textbf{Es preveu que en un perïode de 6 mesos, el client abandoni el banc?}
+\textbf{Es preveu que en un període de 6 mesos, el client abandoni el banc?}
 \end{center}
 La resposta correcte a aquesta pregunta correspon al valor de l'últim camp \textit{exited}, on:
 \begin{itemize}
-	\item 0: si no es preveu que el client abandoni el banc.
-	\item 1: si es preveu que el client abandoni el banc.
+	\item 0: El client \textbf{no} abandona el banc.
+	\item 1: El client \textbf{si} abandona el banc.
 \end{itemize}
 
 \clearpage
 \subsection{Eines a utilitzar}
-Per desenvolupar aquest programa s'utilitzaràn les següents eines.
+Per desenvolupar aquest projecte s'utilitzaran les següents eines.
 \begin{itemize}
-	\item \textit{Python:} Com a llenguatge de programació (a nivell d'exemple), s'ha decidit utilitzar python, el codi complet es pot consultar en l'annex \ref{app:python}.
+	\item \textit{Python:} Com a llenguatge de programació (a nivell d'exemple), s'ha decidit utilitzar python perquè és un dels llenguatges més utilitzats en aquest àmbit. El codi complet es pot consultar en l'annex \ref{app:python}.
 	\begin{center}
 		\includegraphics[width=3cm]{imatges/eines/python.png}
 	\end{center}
 	
-	\item \textit{R:} També s'ha desenvolupat la xarxa neuronal utilitzant el llenguatge de programació R (per completitud del projecte), el codi es pot consultar en l'annex (app:r).
+	\item \textit{R:} També s'ha desenvolupat la xarxa neuronal utilitzant el llenguatge de programació R (per completitud del projecte), el codi es pot consultar en l'annex \ref{app:r}.
 	\begin{center}
 		\includegraphics[width=3cm]{imatges/eines/r.png}
 	\end{center}	
 	
-	\item \textit{Theano:} Llibreria de computació numèrica de codi obert, permet efectuar calculs no només sobre la \textit{CPU} sinó que també sobre la \textit{GPU}.
+	\item \textit{Theano:} Llibreria de computació numèrica de codi obert, permet efectuar càlculs no només sobre la \textit{CPU}, també sobre la \textit{GPU}.
 	\begin{center}
 		\includegraphics[scale=0.4]{imatges/eines/theano.png}
 	\end{center}
 	Instal·lació: \path{\$pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git}	
 	
-	\item \textit{Tensorflow:} Llibreria de computació numèrica de codi obert, inicialment desenvolupada pel \textit{Google brain team} i actualment alliberada sota la llicència \textit{Apache license 2.0}. 
+	\item \textit{Tensorflow:} Llibreria de computació numèrica de codi obert, inicialment desenvolupada pel \textit{Google brain team} i actualment alliberada \say{sota} la llicència \textit{Apache license 2.0}. 
 	\begin{center}
 		\includegraphics[scale=0.4]{imatges/eines/tensorflow.png}
 	\end{center}
 	Instal·lació: \path{https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html}
 	
-	\item \textit{Keras:} Llibreria que serveix d'envoltori per les llibreries \textit{Theano} i \textit{Tensorflow}, permetent crear xarxes neuronals amb relativament poques lineas de codi.
+	\item \textit{Keras:} Llibreria que serveix d'envoltori per les llibreries \textit{Theano} i \textit{Tensorflow}, permetent crear xarxes neuronals amb relativament poques línies de codi.
 	\begin{center}
 		\includegraphics[scale=0.4]{imatges/eines/keras.png}	
 	\end{center}
 	Instal·lació: \path{\$pip install --upgrade keras}
 	
 \end{itemize}
-S'ha de tenir en compte que les llibreries \textit{Theano} i \textit{Tensorflow} estan orientades al món de la investigació i el densevolupament professional, i per tant, si s'utilitzen s'ha de desenvolupar la xarxa neuronal des de 0 (la qual cosa suposa un gran esforç i un alt nivell de coneixement sobre la materia).
+S'ha de tenir en compte que les llibreries \textit{Theano} i \textit{Tensorflow} estan orientades al món de la investigació i el desenvolupament professional, i per tant, si s'utilitzen s'ha de desenvolupar la xarxa neuronal des de 0 (la qual cosa suposa un gran esforç i un alt nivell de coneixement sobre la matèria).
+
+
 \clearpage
 \subsection{Classificació}
 Els passos a seguir per aplicar la classificació utilitzant una xarxa neuronal són.
@@ -447,32 +453,37 @@ Els passos a seguir per aplicar la classificació utilitzant una xarxa neuronal 
 	\item Preprocessament de les dades.
 	\item Creació de la xarxa neuronal.
 	\item Classificació.
-	\item Evaluar la precissió del model.
+	\item Avaluar la precisió del model.
 \end{enumerate}
 \subsubsection{Processament de les dades}
-En aquest apartat es mostra el codi necessari per efectuar el processament de dades que s'ha de fer abans d'exectuar la xarxa neuronal.
+En aquest apartat es mostra el codi necessari per efectuar el processament de dades que s'ha de fer abans d'executar la xarxa neuronal.
 \lstinputlisting[language=Python]{codi/python/part1.py}
 
 \subsubsection{Creació de la xarxa neuronal}
 En aquest apartat es mostra el codi necessari per efectuar la creació de la xarxa neuronal.
+\\\\Aquesta xarxa neuronal tindrà tres capes.
+\begin{itemize}
+	\item Primera capa \say{capa d'entrada}: amb \textbf{onze neurones} (una per cada variable explicativa).
+	\item Segona capa \say{capa interna}: amb \textbf{sis neurones} (una bona pràctica a seguir, correspon a utilitzar un nombre de neurones igual a la mitja del nombre de neurones de la capa d'entrada i la capa de sortida).
+	\item Tercera capa \say{capa de sortida}: amb \textbf{una única neurona}, perquè volem resoldre un problema de classificació binaria.
+\end{itemize}
 \lstinputlisting[language=Python]{codi/python/part2.py}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{imatges/python/entrenament.png}
 	\caption{Entrenament de la xarxa.}
 \end{figure}
-\pagebreak
-És important notar que al final de l'entrenament de la xarxa (en l'últim \textit{poch}) hi ha hagut una \textbf{precissió de 86\%}.
+És important notar que al final de l'entrenament de la xarxa (en l'últim \textit{poch}) hi ha hagut una \textbf{precisió del 86\%}.
 
 \subsubsection{Classificació}
 En aquest apartat es mostra el codi necessari per efectuar la classificació de les dades de test.
 \lstinputlisting[language=Python]{codi/python/part3.py}
 
 \pagebreak
-\subsubsection{Evaluar la precissió del model}
-En aquest apartat es mostra l'efectivitat de la classificació que ha fet la xarxa, comparant les prediccions amb els valors reals.
+\subsubsection{Avaluar la precisió del model}
+En aquest apartat final, es mostra l'efectivitat de la classificació que ha fet la xarxa, comparant les prediccions amb els valors reals.
 \lstinputlisting[language=Python]{codi/python/part4.py}
-S'ha obtingut una precissió del 86\% aproximadament. En la següent matriu de confusió es pot veure la relació de resultats.
+S'ha obtingut una \textbf{precisió del 86\% aproximadament}. En la següent matriu de confusió es pot veure la relació de resultats.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{imatges/python/cm.png}
@@ -482,6 +493,8 @@ S'ha obtingut una precissió del 86\% aproximadament. En la següent matriu de c
 %%%%%%%%%%%%%%%BIBLIOGRAFIA%%%%%%%%%%%%%%%%%
 \clearpage
 \begin{thebibliography}{9}
+	\bibitem{Udemy}\textit{Curs de \textit{machine learning}}:
+  	\\\path{https://www.udemy.com/machinelearning/learn/v4/overview}
 	\bibitem{ANN}\textit{Xarxa neuronal}:
   	\\\path{https://en.wikipedia.org/wiki/Artificial_neural_network}
 	\bibitem{AF1}\textit{Deep sparse rectifier neural networks}:
@@ -499,10 +512,10 @@ S'ha obtingut una precissió del 86\% aproximadament. En la següent matriu de c
 \clearpage
 \begin{appendices}
 \section{Codi}
-\subsection{Python}
+\subsection{Python\label{app:python}}
 \lstinputlisting[language=Python]{codi/python/complet.py}
 \clearpage
-\subsection{R}
+\subsection{R\label{app:r}}
 \lstinputlisting[language=R]{codi/R/complet.R}
 \end{appendices}
 \end{document}
