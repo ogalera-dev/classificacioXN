@@ -1,0 +1,2 @@
+Accedir a /home/oscar/anaconda3/
+$ source bin/activate tensorflow
