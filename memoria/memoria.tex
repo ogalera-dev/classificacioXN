@@ -207,8 +207,8 @@ El funcionament de les xarxes neuronals es basa en la configuració que s'ha de 
 
 Sobre aquestes dades, es vol \textbf{especular el preu} que pot tenir un habitatge en base a les seves propietats.
 \\\\A nivell de neurona, s'ha d'elegir quins paràmetres actuen sobre el seu càlcul i crear una connexió que enllaçi les neurones. 
-\\\\En aquests exemple, la primera neurona s'utilitza per influir en l'especulació del preu d'acord amb les mides de l'habitatge i la distància que està del centre de la ciutat. 
-\\\\De forma intuïtiva es pot pensar que els habitatges més grans i que estan properes al centre de la ciutat són més cars, i per això, la primera neurona interna influirà en el preu en base aquests dos paràmetres.
+\\\\En aquest exemple, la primera neurona s'utilitza per influir en l'especulació del preu d'acord amb les mides de l'habitatge i la distància que està del centre de la ciutat. 
+\\\\De forma intuitiva es pot pensar que els habitatges més grans i que estan properes al centre de la ciutat són més cars, i per això, la primera neurona interna influirà en el preu en base aquests dos paràmetres.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/funcionament/1basic.png}
@@ -231,7 +231,7 @@ Com ja s'ha dit anteriorment, les xarxes neuronals es basen en un mecanisme d'ap
 	\item \textbf{Etapa d'entrenament:} en aquesta etapa es proporcionen múltiples exemples a partir dels quals s'adquireix la gran majoria del coneixement. S'ha de tenir en compte, que durant aquesta etapa cal saber el resultat correcte per obtenir una xarxa ben entrenada.
 	\item \textbf{Etapa de test:} en aquesta etapa es posa a prova la xarxa, proporcionant noves dades i analitzant els resultats. En cas de comptar amb el resultat correcte per aquestes dades, la xarxa pot continuar aprenent.
 \end{itemize}
-Durant l'etapa d'entrenament i un cop s'obté el resultat proporcionat de la xarxa, cal comprar-lo amb el resultat real i extreure un valor que representi la distància que hi ha entre el valor predit i el correcte. Aquesta magnitud s'extreu a partir de la funció de cost. 
+Durant l'etapa d'entrenament i un cop s'obté el resultat proporcionat de la xarxa, cal comparar-lo amb el resultat real i extreure un valor que representi la distància que hi ha entre el valor predit i el correcte. Aquesta magnitud s'extreu a partir de la funció de cost. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.3]{imatges/aprendre/1aprendre.png}
@@ -263,7 +263,7 @@ L'etapa d'aprenentatge per aquest problema i donada una xarxa neuronal molt senz
 	\caption{Etapa d'aprenentatge.}
 	\label{fig:4bp}
 \end{figure}
-\\\\És important veure que en la figura \ref{fig:3aprendre} i \ref{fig:4bp} s'esta utilitzant la mateixa xarxa neuronal però utilitzant diferents dades, i que la funció de cost per aplicar el \textit{backpropagation} utilitza tots els valors disponibles en el conjunt d'entrenament. \footnote{Una iteració sobre totes les dades d'entrenament es coneix com un \textit{epoch}.}
+\\\\És important veure que en les figures \ref{fig:3aprendre} i \ref{fig:4bp} s'esta utilitzant la mateixa xarxa neuronal però utilitzant diferents dades, i que la funció de cost per aplicar el \textit{backpropagation} utilitza tots els valors disponibles en el conjunt d'entrenament. \footnote{Una iteració sobre totes les dades d'entrenament es coneix com un \textit{epoch}.}
 
 
 \clearpage
@@ -473,7 +473,7 @@ En aquest apartat es mostra el codi necessari per efectuar la creació de la xar
 	\includegraphics[scale=0.4]{imatges/python/entrenament.png}
 	\caption{Entrenament de la xarxa.}
 \end{figure}
-És important notar que al final de l'entrenament de la xarxa (en l'últim \textit{poch}) hi ha hagut una \textbf{precisió del 86\%}.
+És important notar que al final de l'entrenament de la xarxa (en l'últim \textit{epoch}) hi ha hagut una \textbf{precisió del 86\%}.
 
 \subsubsection{Classificació}
 En aquest apartat es mostra el codi necessari per efectuar la classificació de les dades de test.
