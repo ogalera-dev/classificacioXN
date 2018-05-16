@@ -26,7 +26,7 @@ training_set[-11] = scale(training_set[-11])
 test_set[-11] = scale(test_set[-11])
 
 # Creacio de la xarxa
-# install.packages('h2o')
+#install.packages('h2o')
 library(h2o)
 h2o.init(nthreads = -1)
 model = h2o.deeplearning(y = 'Exited',
